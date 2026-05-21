@@ -55,3 +55,46 @@ a{
     color: aqua;               /* end color */
 }
 /*====================== HEADER ENDS ==============================*/
+
+
+.text{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    gap: 16px;
+}
+
+.text img{
+    flex: 1;
+    max-width: 500px;
+    min-height: 200px;
+    background: #6b7280;
+}
+
+.hero-content h1{
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0;
+}
+.hero-content p{
+    font-size: 18px;
+    color: #e5e7eb;
+    margin: 0;
+    font-size: 18px;
+}
+.hero-content .button{
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+}
