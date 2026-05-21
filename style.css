@@ -1,3 +1,8 @@
+:root{
+    --gutter-left: 150px;
+    --gutter-right: 200px;
+}
+
 html, body{
     font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
     min-height: 100%;
@@ -12,30 +17,21 @@ body{
     min-height: 100vh;
 }
 
-.header a{
-    text-decoration: none;
-    color: white;
-}
-
-.footer{
-    margin-top: auto;
-    display: flex;
-    text-align: center;
-    justify-content:center;
-    font-size: 22px;
-    background: #1f2937;
-    color: white;
-}
-
 .First_Half{
     display: flex;
     flex-direction: column;
     background: #1f2937;
     color: white;
+    padding: 0 var(--gutter-right) 150px var(--gutter-left);
+    gap: 50px;
 }
 
 
-/* ========== HEADER ===============*/
+/* =================================================HEADER ===============*/
+.header-left img{
+    height: 48px;
+    width: auto;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -49,12 +45,15 @@ body{
 .header-right{
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 48px;
 }
-.header-right a{
+.header a{
+    text-decoration: none;
+    color: darkgray;
     font-size: 20px;
-    transition: color 0.2s ease;  /*animates color property over time*/
+    transition: color 0.2s ease; 
 }
+
 .header-right a:hover{
     color: aqua;               /* end color */
 }
@@ -65,6 +64,7 @@ body{
     display: flex;
     gap: 32px;
     align-items: center;
+    gap: 100px;
 }
 
 .hero-content{
@@ -76,8 +76,8 @@ body{
 
 .text img{
     flex: 1;
-    max-width: 500px;
-    min-height: 200px;
+    max-width: 600px;
+    min-height: 250px;
     background: #6b7280;
 }
 
@@ -111,7 +111,7 @@ body{
 .Second_Half{
     background: #f9fafb;
     color: #1f2937;
-    padding: 48px 0;
+    padding: 48px var(--gutter-right) 48px var(--gutter-left);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -161,13 +161,17 @@ body{
     margin: 0;
     background:#e5e7eb;
     color: black;
-    padding: 64px 124px;
+    padding: 64px var(--gutter-right) 64px var(--gutter-left);
     font-size: 24px;
 }
 
+.writter{
+    align-self: flex-end;
+}
+
 .writter h4{
+    margin: 0;
     text-align: right;
-    padding: 0 124px;
 }
 
 /*=============================THIRD HALF DONE================================*/
@@ -180,10 +184,10 @@ body{
     align-items: center;
     background: #3882f6;
     color: white;
-    width: 65%;
-    max-width: 1200px;
+    width: calc(100% - var(--gutter-left) - var(--gutter-right));
+    box-sizing: border-box;
     padding: 32px 48px;
-    margin: 80px auto;
+    margin: 80px var(--gutter-right) 80px var(--gutter-left);
     border-radius: 12px;
 }
 
@@ -210,3 +214,16 @@ body{
     color: wheat;
 }
 /*=========================FOURTH_HALF DONE========================*/
+
+/*=========================FOOOOTER================================*/
+
+
+.footer{
+    margin-top: auto;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    font-size: 22px;
+    background: #1f2937;
+    color: white;
+}
